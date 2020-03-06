@@ -1,5 +1,5 @@
 import robocode.*;
-//import java.awt.Color;
+import java.awt.Color;
 
 // API help : http://robocode.sourceforge.net/docs/robocode/robocode/Robot.html
 
@@ -17,7 +17,7 @@ public class Hello extends Robot
 		// After trying out your robot, try uncommenting the import at the top,
 		// and the next line:
 
-		// setColors(Color.red,Color.blue,Color.green); // body,gun,radar
+		 setColors(Color.pink,Color.black,Color.green); // body,gun,radar
 
 		// Robot main loop
 		while(true) {
