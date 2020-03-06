@@ -34,22 +34,22 @@ public class Hello extends Robot
 	 * onScannedRobot: What to do when you see another robot
 	 */
 	public void onScannedRobot(ScannedRobotEvent e) {
+	
 	   if (e.getDistance() < 100) {
            fire(3);
        } else {
            fire(1);
        }
-	   ahead(200);
 	}
 	
-
 
 	/**
 	 * onHitByBullet: What to do when you're hit by a bullet
 	 */
 	public void onHitByBullet(HitByBulletEvent e) {
 		// Replace the next line with any behavior you would like
-		turnGunRight(360);
+		
+		gtfo();
 	}
 	
 	/**
@@ -57,12 +57,16 @@ public class Hello extends Robot
 	 */
 	public void onHitWall(HitWallEvent e) {
 		// Replace the next line with any behavior you would like
-		back(30);
-		turnRight(90);
+		gtfo();
 	}
 	
+	public void gtfo() {
+		turnLeft(90);
+		ahead(100);
+
+	}
 	
 	public void onHitRobot(HitRobotEvent e) {	
-		turnGunRight(360);
+		//turnGunRight(180);
 	}	
 }
